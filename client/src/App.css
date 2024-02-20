@@ -1,104 +1,28 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  width: 100%;
+  height: 100%;
+}
+
 body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  width: 100%;
+  height: 100%;
   background-color: rgb(15, 23, 42);
 }
 
-/* Header */
-
-#main-header {
-  display: flex;
-  justify-content: space-between;
-  background-color: rgba(15, 23, 42, .5);
-  backdrop-filter: blur(4px);
-  align-items: center;
-  padding: 0 6vw;
-  height: 65px;
+.App {
+  background-color: rgb(15, 23, 42);
   width: 100%;
-  position: fixed;
+  height: 100%;
 }
-
-#main-header .left-head {
-  display: flex;
-  width: 100px;
-}
-
-#main-header .left-head .logo {
-  display: flex;
-  width: inherit;
-  margin-left: 0;
-}
-
-#main-header .left-head .logo a {
-  text-decoration: none;
-  color: rgb(255, 255, 255);
-}
-
-#main-header .left-head .logo h1 {
-  margin: 0;
-  padding: 0;
-  font-size: 1.9rem;
-  font-weight: 900;
-  letter-spacing: 0.1rem;
-}
-
-#main-header .right-head {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-#main-header .right-head ul {
-  display: flex;
-  list-style: none;
-}
-
-#main-header .right-head ul li {
-  margin: 0 25px;
-  font-size: 1.3rem;
-  font-weight: 700;
-  letter-spacing: 0.05rem;
-  cursor: pointer;
-}
-
-#main-header .right-head ul li:last-child {
-  margin-right: 1px;
-}
-
-#main-header .right-head ul li a {
-  text-decoration: none;
-  color: rgb(255, 255, 255);
-  position: relative;
-}
-
-#main-header .right-head ul li a::after {
-  content: "";
-  position: absolute;
-  width: 100%;
-  height: 2px;
-  bottom: 0;
-  left: 0;
-  background-color: rgb(255, 0, 0);
-  transform-origin: bottom right;
-  transition: transform 0.25s ease-out;
-  transform: scaleX(0);
-}
-
-#main-header .right-head ul li a.active::after {
-  width: 40%;
-  height: 2px;
-  transform: scaleX(1);
-}
-
-#main-header .right-head ul li a.active:hover::after {
-  width: 100%;
-  height: 2px;
-  transform: scaleX(1);
- }
-
-#main-header .right-head ul li a:hover::after {
-  transform: scaleX(1);
-  transform-origin: bottom left;
-}
-
-
-/* Hero container */
-
